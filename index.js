@@ -39,7 +39,7 @@ function getPrize() {
     for (let i = 0; i < prizes.length; i++) {
         let prize = prizes[i];
         if (rand < prize.chance) {
-            prizes[i].counter++;
+            prize.counter++;
             return;
         }
 
@@ -54,5 +54,6 @@ for (let i = 0; i < 10000; i++) {
 
 // Log the results.
 for (let i = 0; i < prizes.length; i++) {
-    console.log(prizes[i].prize + ": " + prizes[i].counter);
+    let prize = prizes[i];
+    console.log(prize.prize + ": " + prize.counter);
 }
